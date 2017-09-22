@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.png">
+
+    <title>InsurePeople - Make a Claim</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Custom styles -->
+     <link rel="stylesheet" href="main.css">
+    
+    <!-- Navbar styles -->
+     <link rel="stylesheet" href="navbar.css">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-custom navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-left navimage" href="index.html"><img src="logonav.png" alt="InsurePeople" height="50" width="100"></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="get-started.html">Get Started</a></li>
+            <li><a href="library.html">Policies</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    <div class="toptitle">
+    <div class="container ">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="title">Make a Claim On Your Insured Gadget <br><small>Answer a few questions and for 90% of claims payout is immediate!</small></h1>
+            </div>
+        </div>
+    </div><!-- /.container -->
+    </div>
+    
+    <div class="container">
+        <div class="col-md-offset-2 col-md-8 col-xs-12">
+        <form class="form-vertical">
+            <h4>My Claim</h4>
+            <div class="form-group row">
+                <label class="control-label col-sm-6 spaceabove">You are claiming for:</label>
+                <div class="col-sm-6">
+                    <select class="form-control" id="PhoneType" required>
+                        <option value="">Select one</option>
+                        <option value="iPhone">iPhone 7</option>
+                        <option value="Samsung">Samsung 8</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div>
+                <h5>Our Questions</h5>
+            </div>
+            
+            <div class="form-group row">
+                <label class="control-label col-sm-6">Location of claim event:</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" placeholder="Location">
+                </div>
+            </div>
+            
+            <div class="form-group row">
+                <label class="control-label col-sm-6">Tell us what happened:</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" placeholder="What happened?">
+                </div>
+            </div>
+            
+            <div class="form-group row">
+                <label class="col-sm-6">For loss or theft, please tick to disable gadget:</label>
+                <div class="col-sm-6">
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox"> Disable device
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group row">
+                <label class="col-sm-6">Do you agree to contact your airtime provider within 24 hours of this claim?:</label>
+                <div class="col-sm-6">
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox"> Agree to contact 
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-xs-12">
+                <button type="submit" class="btn btn-primary spaceabove">Make Claim</button>
+            </div>
+        </form>
+        
+        <div class="col-sm-offset-2 col-sm-10 col-xs-12">
+            <button class="InsureButtonMax InsureButton">
+                Your Claim (REF 001) Has Been Accepted!<br><br>
+                <div class="col-xs-9"><span class="IButtonSpan">Total Amount:</span></div>
+                <div class="col-xs-3"><span class="IButtonSpan">£500</span></div>
+                <br>
+                <div class="col-xs-9"><span class="IButtonSpan">Minus Deductible:</span></div>
+                <div class="col-xs-3"><span class="IButtonSpan">-£50</span></div>
+                <br>
+                <div class="col-xs-9"><span class="IButtonSpan">Paid to your account:</span></div>
+                <div class="col-xs-3"><span class="IButtonSpan"><br>£450</span></div>
+            </button>
+        </div>
+        </div>
+    </div><!-- /.container -->
+
+    <div class="bottombox"> 
+        <div class="container bottom">
+            <div class=" col-md-offset-2 col-md-8">
+                <p>InsurePeople Limited is registered at Companies House (1087431) and authorised by the Financial Conduct Authority ("FCA"), registration number (xxxxxx). The registration details can be found on www.fca.gov.uk/register. For trading purposes, the registered address is xxxxx, xxx, xxx xxx. </p>   
+            </div>
+        </div><!-- /.container -->
+    </div>
+      
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+
+<span id="sbmarwbthv5"></span></body></html>
