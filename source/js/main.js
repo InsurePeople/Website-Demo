@@ -4,6 +4,7 @@ $("document").ready(function(){
             window.location.replace("log-in.html?" + $(location).attr('href'));
         } else if(sessionStorage.getItem('idval') == null){
             if(window.location.pathname != "/InsurePeople/get-started.html"){
+                alert(window.location.pathname);
                 window.location.replace("get-started.html");
         }
         } else if(sessionStorage.getItem('phone') == null){
