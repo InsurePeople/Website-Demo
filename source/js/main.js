@@ -4,8 +4,8 @@ $("document").ready(function(){
             window.location.replace("log-in.html?" + $(location).attr('href'));
         } else if(sessionStorage.getItem('idval') == null){
             if(window.location.href != "https://insurepeople.github.io/Website-Demo/get-started.html"){
-                alert(window.location.pathname);
-                window.location.replace("get-started.html");
+                console.log(window.location.pathname);
+                //window.location.replace("get-started.html");
         }
         } else if(sessionStorage.getItem('phone') == null){
             if(window.location.pathname != "/InsurePeople/get-started.html" && window.location.pathname != "/InsurePeople/insureme.html"){
