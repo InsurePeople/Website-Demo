@@ -3,12 +3,11 @@ $("document").ready(function(){
         if(sessionStorage.getItem('username') == null){
             window.location.replace("log-in.html?" + $(location).attr('href'));
         } else if(sessionStorage.getItem('idval') == null){
-            if(window.location.href != "https://insurepeople.github.io/Website-Demo/get-started.html"){
-                console.log(window.location.pathname);
-                //window.location.replace("get-started.html");
+            if(window.location.href != "/Website-Demo/get-started.html"){
+                window.location.replace("get-started.html");
         }
         } else if(sessionStorage.getItem('phone') == null){
-            if(window.location.pathname != "/InsurePeople/get-started.html" && window.location.pathname != "/InsurePeople/insureme.html"){
+            if(window.location.pathname != "/InsurePeople/get-started.html" && window.location.pathname != "/Website-Demo/insureme.html"){
                 window.location.replace("insureme.html");
             }
         }
