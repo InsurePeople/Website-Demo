@@ -4,11 +4,13 @@ $("document").ready(function(){
             window.location.replace("log-in.html?" + $(location).attr('href'));
         } else if(sessionStorage.getItem('idval') == null){
             if(window.location.href != "/Website-Demo/get-started.html"){
-                window.location.replace("get-started.html");
+                //window.location.replace("get-started.html");
+                console.log((window.location.href);
         }
         } else if(sessionStorage.getItem('phone') == null){
             if(window.location.pathname != "/Website-Demo/get-started.html" && window.location.pathname != "/Website-Demo/insureme.html"){
-                window.location.replace("insureme.html");
+                //window.location.replace("insureme.html");
+                console.log((window.location.href);
             }
         }
     }
