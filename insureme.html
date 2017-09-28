@@ -60,9 +60,8 @@
     
     <div class="container">
         <div class=" col-md-offset-2 col-md-8">
-        <form class="form-vertical" action="myinsurancechain.html">
-            
-            <h4>What's Your Gadget?</h4>
+        <form class="form-vertical" id="demoinsure">
+            <h4 class="">What's Your Gadget?</h4>
             <div class="form-group row">
                 <label class="control-label col-sm-6" for="PhoneType">Select your phone:</label>
                 <div class="col-sm-6">
@@ -77,28 +76,28 @@
             <div class="form-group row">
                 <label class="control-label col-sm-6" for="SerialNum">Please enter the serial number of your phone:</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" id="SerialNum" placeholder="Serial Number" pattern=".{15,}" title="IMEI numbers should be at least 15 characters in length">
+                    <input type="text" class="form-control" id="SerialNum" placeholder="Serial Number" disabled>
                 </div>
             </div>
                 
             <div class="form-group row">
                 <label class="control-label col-sm-6 spaceabove">Gadget Cover Price:</label>
                 <div class="col-sm-6">
-                    <div class="list-group-item emptyitem">Please Select Your Phone Above</div>
+                    <div class="list-group-item emptyitem priceshow">Please Select Your Phone Above</div>
                 </div>
             </div>
 
             
-            <p>Below are other devices we have found linked to your account, check to include each device in your quote:</p>
+            <p class="pinktext">Below are other devices we have found linked to your account, check to include each device in your quote:</p>
             
             <div class="col-xs-12">
             <div class="col-sm-offset-3 col-lg-7 col-md-8 col-sm-7"> 
-            <ul class="list-group listprices">
-                <li class="list-group-item emptyitem">None Found</li>
-                <li class="list-group-item"> iPad mini 4 <span class="listprice">£4 per month</span><input type="checkbox"></li>
-                <li class="list-group-item">MacBook Air <span class="listprice">£5 per month</span><input type="checkbox"></li>
-                <li class="list-group-item">Galaxy Tab S3 <span class="listprice">£3 per month</span><input type="checkbox"></li>
-                <li class="list-group-item">Chromebook Pro <span class="listprice">£4 per month</span><input type="checkbox"></li>
+            <ul class="list-group listprices gadgetlist">
+                <li class="list-group-item emptyitem empty toshow">None Found</li>
+                <li id="ipm4" class="list-group-item apple tohide"> iPad mini 4 <span class="listprice">£4 per month</span><input class="itemcheck" type="checkbox" value="4"></li>
+                <li id="mba" class="list-group-item apple tohide">MacBook Air <span class="listprice">£5 per month</span><input class="itemcheck" type="checkbox" value="5"></li>
+                <li id="gts3" class="list-group-item samsung tohide">Galaxy Tab S3 <span class="listprice">£3 per month</span><input class="itemcheck" type="checkbox" value="3"></li>
+                <li id="cbp" class="list-group-item samsung tohide">Chromebook Pro <span class="listprice">£4 per month</span><input class="itemcheck" type="checkbox" value="4"></li>
             </ul>
             </div>
             </div>
@@ -108,7 +107,7 @@
             <div class="form-group row">
                 <label class="control-label col-sm-5">Type of Card:</label>
                 <div class="col-sm-7">
-                    <select class="form-control" id="PhoneType">
+                    <select class="form-control" id="PhoneType" disabled>
                         <option>Select one</option>
                         <option>MasterCard</option>
                         <option>Visa</option>
@@ -119,34 +118,34 @@
             <div class="form-group row">
                 <label class="control-label col-sm-5">Name on Card:</label>
                 <div class="col-sm-7">
-                    <input type="text" class="form-control" placeholder="Card Name">
+                    <input type="text" class="form-control" placeholder="Card Name" disabled>
                 </div>
             </div>
             
             <div class="form-group row">
                 <label class="control-label col-sm-5">Card Number:</label>
                 <div class="col-sm-7">
-                    <input type="text" class="form-control" placeholder="Card Number">
+                    <input type="text" class="form-control" placeholder="Card Number" disabled>
                 </div>
             </div>
             
             <div class="form-group row">
                 <label class="control-label col-sm-5">Expiry Date:</label>
                 <div class="col-sm-7">
-                    <input type="date" class="form-control" placeholder="Expiry Date">
+                    <input type="date" class="form-control" placeholder="Expiry Date" disabled>
                 </div>
             </div>
             
             <div class="form-group row">
                 <label class="control-label col-sm-6 col-xs-12">3 Digit Security Code:</label>
                 <div class="col-sm-2 col-xs-4">
-                    <input type="text" class="form-control" placeholder="Number" maxlength="1">
+                    <input type="text" class="form-control" placeholder="Number" maxlength="1" disabled>
                 </div>
                 <div class="col-sm-2 col-xs-4">
-                    <input type="text" class="form-control" placeholder="Number" maxlength="1">
+                    <input type="text" class="form-control" placeholder="Number" maxlength="1" disabled>
                 </div>
                 <div class="col-sm-2 col-xs-4">
-                    <input type="text" class="form-control" placeholder="Number" maxlength="1">
+                    <input type="text" class="form-control" placeholder="Number" maxlength="1" disabled>
                 </div>
             </div>
             
@@ -155,42 +154,42 @@
             <div class="form-group row">
                 <label class="control-label col-sm-6 col-xs-12">Sort Code:</label>
                 <div class="col-sm-2 col-xs-4">
-                    <input type="text" class="form-control" placeholder="Number" maxlength="2">
+                    <input type="text" class="form-control" placeholder="Number" maxlength="2" disabled>
                 </div>
                 <div class="col-sm-2 col-xs-4">
-                    <input type="text" class="form-control" placeholder="Number" maxlength="2">
+                    <input type="text" class="form-control" placeholder="Number" maxlength="2" disabled>
                 </div>
                 <div class="col-sm-2 col-xs-4">
-                    <input type="text" class="form-control" placeholder="Number" maxlength="2">
+                    <input type="text" class="form-control" placeholder="Number" maxlength="2" disabled>
                 </div>
             </div>
             
             <div class="form-group row">
                 <label class="control-label col-sm-5">Name on Account:</label>
                 <div class="col-sm-7">
-                    <input type="text" class="form-control" placeholder="Account Name">
+                    <input type="text" class="form-control" placeholder="Account Name" disabled>
                 </div>
             </div>
             
             <div class="form-group row">
                 <label class="control-label col-sm-5">Account Number:</label>
                 <div class="col-sm-7">
-                    <input type="text" class="form-control" placeholder="Account Number">
+                    <input type="text" class="form-control" placeholder="Account Number" disabled>
                 </div>
             </div>
             
             <div class="form-group row">
-                <label class="col-xs-12">Do you allow us to lock your gadget in the event of loss or theft? Activated through a claim.</label>
+                <label class="col-xs-12 pinktext">Do you allow us to lock your gadget in the event of loss or theft? Activated through a claim.</label>
                 <div class="col-xs-offset-1 col-xs-11">
                     <div class="form-check">
-                        <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox"> Tick to confim agreement
+                        <label class="form-check-label pinktext">
+                            <input class="form-check-input" type="checkbox" disabled> Tick to confim agreement
                         </label>
                     </div>
                 </div>
             </div>
 
-            <div class="col-xs-12"><button type="submit" class="btn btn-primary">Confirm Purchase<br><small> Proceed to your cover overview</small></button></div>
+            <div class="col-sm-6 col-xs-12"><button type="submit" class="InsureButton startedbut"><h4>Confirm Purchase</h4><small class="bluetext"> Proceed to your cover overview</small></button></div>
             
         </form>
         </div>
@@ -212,6 +211,77 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
-
-<span id="sbmarwbthv5"></span></body></html>
+      
+    <!-- Additional JavaScript -->
+    <script src="source/js/main.js"></script>
+      
+    <script>
+        $("document").ready(function(){
+            $("#PhoneType").change(function(){
+                var price = 0;
+                if($("#PhoneType").val() == ""){
+                    $(".itemcheck").prop('checked', false);
+                    $(".toshow").addClass("tohide");
+                    $(".toshow").removeClass("toshow");
+                    $(".empty").addClass("toshow");
+                    $(".priceshow").html("Please Select Your Phone Above");
+                    
+                }
+                
+                if($("#PhoneType").val() == "iPhone"){
+                    price = 5;
+                    $(".itemcheck").prop('checked', false);
+                    $(".toshow").addClass("tohide");
+                    $(".toshow").removeClass("toshow");
+                    $(".apple").addClass("toshow");
+                    $(".priceshow").html("£" + price + " per month");
+                }
+                
+                if($("#PhoneType").val() == "Samsung"){
+                    price = 4;
+                    $(".itemcheck").prop('checked', false);
+                    $(".toshow").addClass("tohide");
+                    $(".toshow").removeClass("toshow");
+                    $(".samsung").addClass("toshow");
+                    $(".priceshow").html("£" + price + " per month");
+                }
+                
+                $(".itemcheck").click(function(){
+                    var pricevalue = parseInt($(this).val());
+                    if($(this).is(':checked')) {
+                        price += pricevalue;
+                        $(".priceshow").html("£" + price + " per month");
+                    } else {
+                        price -= pricevalue;
+                        $(".priceshow").html("£" + price + " per month");
+                    }
+                });
+                
+                $("#demoinsure").submit(function(e){
+                    e.preventDefault();
+                    if(window.sessionStorage){
+                        sessionStorage.setItem("phone", $("#PhoneType").val());
+                    }
+                    var gadget = 1;
+                    $(".gadgetlist input:checkbox:checked").each(function() {
+                        var parent = $(this).parent().closest('li').attr('id').split(' ');
+                        var gadgettext = $("#" + parent).html();
+                        gadgettext = gadgettext.substring(0, gadgettext.indexOf('<'));
+                        gadgettext = gadgettext.replace(/\s+/g, '');
+                        if(window.sessionStorage){
+                            sessionStorage.setItem("gadget" + gadget, gadgettext);
+                        }
+                        gadget += 1;
+                    });
+                    while(gadget<3){
+                        if(window.sessionStorage){
+                            sessionStorage.removeItem("gadget" + gadget);
+                        }
+                        gadget += 1;
+                    }
+                    window.location.href = "myinsurancechain.html";
+                });
+            });
+        });
+    </script>
+</body></html>

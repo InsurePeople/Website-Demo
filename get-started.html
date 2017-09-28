@@ -60,8 +60,18 @@
     
     <div class="container">
         <div class=" col-md-offset-2 col-md-8">
-        <form action="insureme.html">
-            <h3>Registration Questions: <br><small>Please fill in all fields below</small></h3>
+            <button id="claimref" class="InsureButton tohide">
+                <h4>My Profile Score</h4><br>
+                <span class="IButtonSpan">Clearscore:</span>
+                <div id="clearscore" class="list-group-item emptyitem pinktext">100 - Top 20% of users</div><br>
+                <span class="IButtonSpan">Total Profile Score:</span>
+                <div id="totalscore" class="list-group-item emptyitem pinktext">Awaiting Confirmation</div><br><br>
+                <span class="IButtonSpan">Click to continue to insure your gadgets now!</span><br><br>
+                <div class="pinktext">Or go to Policies to see how your Profile Score is calculated</div>
+            </button>
+            
+        <form id="demodetails" class="form-vertical">
+            <h3 class="bluetext">Registration Questions: <br><small class="pinktext">Please fill in all fields below.</small></h3>
             
             <div class="form-group row">
                 <div class="input-group">
@@ -73,31 +83,31 @@
             <div class="form-group row">
                 <div class="input-group">
                     <span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="Home Address">
+                    <input type="text" class="form-control" id="inputAddress" placeholder="Home Address" disabled>
                 </div>
             </div>
         
             <div class="form-group row">
                 <div class="input-group">
                     <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                    <input type="date" class="form-control" id="inputDoB" placeholder="Date of Birth">
+                    <input type="date" class="form-control" id="inputDoB" placeholder="Date of Birth" disabled>
                 </div>
             </div>
         
             <div class="form-group row">
                 <div class="input-group">
                     <span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
-                    <input type="text" class="form-control" id="inputNumber" placeholder="Phone Number" pattern="[0-9]{11}" title="Please enter an 11 digit mobile or home phone number, e.g. 07123123456">
+                    <input type="text" class="form-control" id="inputNumber" placeholder="Phone Number" disabled>
                 </div>
             </div>
             
-            <p class="lead">Identification</p>
-            <p>The following fields are not compulsory and can be completed at any time. This infomation is used to verify identification, allowing us to complete claims immediately instead of having to confirm your identity at the time.</p>
+            <h5 class="bluetext">Identification <br>
+            <small class="pinktext">The following fields are not compulsory and can be completed at any time. This infomation is used to verify identification, allowing us to complete claims immediately instead of having to confirm your identity at the time.</small></h5>
             
             <div class="form-group row">
                 <div class="input-group">
                     <span class="input-group-addon"><span class="glyphicon glyphicon-road"></span></span>
-                    <input type="text" class="form-control" id="inputDLN" placeholder="Driving License Number" pattern="[A-Za-z0-9]{16}" title="Your Driving License Number should be in the following format: 5 letters of your surname, 6 numbers of birth date, 2 initials of forename and 3 computer check digits, 16 characters in total, e.g. ABBCS123456DE0AA">
+                    <input type="text" class="form-control" id="inputDLN" placeholder="Driving License Number">
                 </div>
             </div>
             
@@ -116,8 +126,8 @@
             </div>
             
             
-            <p class="lead">Social Media Accounts</p>
-            <p>Do you allow us to look at your social media accounts? We will not post on your social media accounts and will not keep any data. We view your accounts for profiling purposes only once registered.</p>
+            <h5 class="bluetext">Social Media Accounts<br>
+            <small class="pinktext">Do you allow us to look at your social media accounts? We will not post on your social media accounts and will not keep any data. We view your accounts for profiling purposes only once registered.</small></h5>
             
             <div class="form-group row">
                 <div class="input-group">
@@ -141,17 +151,17 @@
             </div>
             
             <div class="form-group row">
-                <label class="col-xs-12">We will now check your credit rating with ClearScore. Please tick the box to confirm agreement. No mark will be left on your credit score record.</label>
+                <label class="col-xs-12 pinktext">We will now check your credit rating with ClearScore. Please tick the box to confirm agreement. No mark will be left on your credit score record.</label>
                 <div class="col-xs-offset-1 col-xs-11">
                     <div class="form-check">
-                        <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox"> Tick to confim agreement
+                        <label class="form-check-label pinktext">
+                            <input class="form-check-input" type="checkbox" disabled> Tick to confim agreement
                         </label>
                     </div>
                 </div>
             </div>
             
-            <div class="col-xs-12"><button type="submit" class="btn btn-primary">Confirm Details<br><small> Continue to see your profile score</small></button></div>
+            <div class="col-sm-6 col-xs-12"><button class="InsureButton startedbut" type="submit"><h4>Confirm Details</h4><br><small class="bluetext"> Continue to see your profile score</small></button></div>
         </form>
         </div>
     </div><!-- /.container -->
@@ -173,6 +183,58 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
-
-<span id="sbmarwbthv5"></span></body></html>
+      
+    <!-- Additional JavaScript -->
+    <script src="source/js/main.js"></script>
+      
+    <script>
+        $("document").ready(function(){
+            $("#demodetails").submit(function(e){
+                $("#claimref").show();
+                e.preventDefault();
+                var identification = 0;
+                var socialmedia = 0;
+                if($("#inputDLN").val()){
+                    identification +=1;
+                }
+                if($("#inputPPort").val()){
+                    identification +=1;
+                }
+                if($("#inputNIN").val()){
+                    identification +=1;
+                }
+                
+                if($("#inputFace").val()){
+                    socialmedia +=1;
+                }
+                if($("#inputTwit").val()){
+                    socialmedia +=1;
+                }
+                if($("#inputRed").val()){
+                    socialmedia +=1;
+                }
+                
+                if(window.sessionStorage){
+                    sessionStorage.setItem("idval", identification);
+                    sessionStorage.setItem("socval", socialmedia);
+                }
+                    
+                var totalscore = 100 + (identification*100) + (socialmedia*100);
+                if(totalscore >= 700){
+                    $("#totalscore").html("700 - Top 10% of users");
+                } else if(totalscore >= 600){
+                    $("#totalscore").html("600 - Top 15% of users");
+                } else if(totalscore >= 500){
+                    $("#totalscore").html("500 - Top 20% of users");
+                } else if(totalscore >= 400){
+                    $("#totalscore").html("400 - Top 30% of users");
+                } else if(totalscore >= 300){
+                    $("#totalscore").html("300 - Top 40% of users");
+                } 
+                $("#claimref").click(function(){
+                    window.location.href = "insureme.html";
+                });
+            });
+        }); //ready end
+    </script>
+</body></html>

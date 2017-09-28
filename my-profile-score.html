@@ -66,36 +66,39 @@
             <div class="form-group row space">
                 <label class="control-label col-sm-3 spaceabove">Your Clearscore:</label>
                 <div class="col-sm-5">
-                    <div class="list-group-item emptyitem">100 - Top 15% of users</div>
+                    <div id="clearscore" class="list-group-item emptyitem">Awaiting Confirmation</div>
                 </div>
-                <a href=""><label class="control-label col-sm-offset-1 col-sm-3 spaceabove">Click For More Info</label></a>
+                <a href=""><label class="control-label col-sm-offset-1 col-sm-3 spaceabove pinktext">Click For More Info</label></a>
             </div>
             
             <div class="row">
-                <h6>Our Additional Add-Ons:</h6>
+                <h6 class="pinktext">Our Additional Add-Ons:</h6>
             </div>
             <div class="form-group row">
                 <label class="control-label col-sm-3 spaceabove">ID Cross Verification:</label>
                 <div class="col-sm-5">
-                    <div class="list-group-item emptyitem">Awaiting Confirmation</div>
+                    <div id="idscore" class="list-group-item emptyitem">Awaiting Confirmation</div>
                 </div>
-                <a href=""><label class="control-label col-sm-offset-1 col-sm-3 spaceabove">Click For More Info</label></a>
+                <a href=""><label class="control-label col-sm-offset-1 col-sm-3 spaceabove pinktext">Click For More Info</label></a>
             </div>
             
             <div class="form-group row">
                 <label class="control-label col-sm-3 spaceabove">Social Media Score:</label>
                 <div class="col-sm-5">
-                    <div class="list-group-item emptyitem">Awaiting Confirmation</div>
+                    <div id="socialscore" class="list-group-item emptyitem">Awaiting Confirmation</div>
                 </div>
-                <a href=""><label class="control-label col-sm-offset-1 col-sm-3 spaceabove">Click For More Info</label></a>
+                <a href=""><label class="control-label col-sm-offset-1 col-sm-3 spaceabove pinktext">Click For More Info</label></a>
             </div>
             
             <div class="form-group row">
                 <label class="control-label col-sm-3 spaceabove">Total Score:</label>
                 <div class="col-sm-5">
-                    <div class="list-group-item emptyitem">625 - Top 15% of users</div>
+                    <div id="totalscore" class="list-group-item emptyitem">Awaiting Confirmation</div>
                 </div>
-                <a href=""><label class="control-label col-sm-offset-1 col-sm-3 spaceabove">Click For More Info</label></a>
+                <a href=""><label class="control-label col-sm-offset-1 col-sm-3 spaceabove pinktext">Click For More Info</label></a>
+            </div>
+            <div class="form-group row centered">
+                <a href="get-started.html" class="bluetext"><h6>To provide further information and improve your profile score, click here!</h6></a>
             </div>
         </div>
     </div><!-- /.container -->
@@ -116,6 +119,62 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
-
-<span id="sbmarwbthv5"></span></body></html>
+    <script>
+        $("document").ready(function(){
+            if(window.sessionStorage){
+                if(sessionStorage.getItem('username') == null){
+                    window.location.replace("log-in.html?" + $(location).attr('href'));
+                } else if(sessionStorage.getItem('idval') == null){
+                    window.location.replace("get-started.html");
+                }
+            }
+            var userscore = 0;
+            var idscore = 0;
+            var socialscore = 0;
+            if(window.sessionStorage){
+                if(sessionStorage.getItem("username")!=null){
+                    $("#clearscore").html("100 - Top 20% of users");
+                    userscore = 100;
+                }
+                
+                if(sessionStorage.getItem("idval")!=null){
+                    if(sessionStorage.getItem("idval")==3){
+                        $("#idscore").html("300 - Top 10% of users");
+                        idscore = 300;
+                    } else if(sessionStorage.getItem("idval")==2){
+                        $("#idscore").html("200 - Top 20% of users");
+                        idscore = 200;
+                    } else if(sessionStorage.getItem("idval")==1){
+                        $("#idscore").html("100 - Top 40% of users");
+                        idscore = 100;
+                    }
+                }
+                
+                if(sessionStorage.getItem("socval")!=null){
+                    if(sessionStorage.getItem("socval")==3){
+                        $("#socialscore").html("300 - Top 10% of users");
+                        socialscore = 300;
+                    } else if(sessionStorage.getItem("socval")==2){
+                        $("#socialscore").html("200 - Top 20% of users");
+                        socialscore = 200;
+                    } else if(sessionStorage.getItem("socval")==1){
+                        $("#socialscore").html("100 - Top 40% of users");
+                        socialscore = 100;
+                    }
+                }
+            }
+            var totalscore = userscore + idscore + socialscore;
+            if(totalscore >= 700){
+                $("#totalscore").html("700 - Top 10% of users");
+            } else if(totalscore >= 600){
+                $("#totalscore").html("600 - Top 15% of users");
+            } else if(totalscore >= 500){
+                $("#totalscore").html("500 - Top 20% of users");
+            } else if(totalscore >= 400){
+                $("#totalscore").html("400 - Top 30% of users");
+            } else if(totalscore >= 300){
+                $("#totalscore").html("300 - Top 40% of users");
+            } 
+        });
+    </script>
+</body></html>

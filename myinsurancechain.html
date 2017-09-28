@@ -61,7 +61,7 @@
     <div class="container">
         <div class=" col-md-offset-2 col-md-8">
         <div class="table-responsive">
-            <table class="table table-striped table-hover">
+            <table class="table table-striped table-hover bluetext spaceabove">
                 <thead>
                     <tr>
                         <th>My Gadget</th>
@@ -74,61 +74,121 @@
                     </tr>
                 </thead>
                 
-                <tbody>
-                    <tr>
+                <tbody>            
+                    <tr id="iPhone" class="apple">
                         <td>iPhone 7</td>
-                        <td>Yes</td>
-                        <td><button>STOP</button></td>
-                        <td>01/09/2017</td>
-                        <td>01/10/2017</td>
-                        <td>£6</td>
-                        <td><a href="claim.html"><button>CLAIM</button></a></td>
+                        <td class="insured">Yes</td>
+                        <td><button class="insurebut insureclaimbut" value="stop">STOP</button></td>
+                        <td class="fromdate"></td>
+                        <td class="todate"></td>
+                        <td>£<span class="gadgetprice">6</span></td>
+                        <td><a class="claim" href="claim.html?iphone"><button class="insureclaimbut">CLAIM</button></a></td>
                     </tr>
                     
-                    <tr>
+                    <tr class="apple">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr id="iPadmini4" class="apple">
                         <td>iPad mini 4</td>
-                        <td>Yes</td>
-                        <td><button>STOP</button></td>
-                        <td>01/09/2017</td>
-                        <td>01/10/2017</td>
-                        <td>£4</td>
-                        <td><a href="claim.html"><button>CLAIM</button></a></td>
+                        <td class="insured">No</td>
+                        <td><button class="insurebut insureclaimbut" value="start">START</button></td>
+                        <td class="fromdate"></td>
+                        <td class="todate"></td>
+                        <td>£<span class="gadgetprice">4</span></td>
+                        <td><a class="claim tohide" href="claim.html?ipad"><button class="insureclaimbut">CLAIM</button></a></td>
                     </tr>
                     
-                    <tr>
+                    <tr class="apple">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr id="MacBookAir" class="apple">
                         <td>MacBook Air</td>
-                        <td>Yes</td>
-                        <td><button>STOP</button></td>
-                        <td>01/09/2017</td>
-                        <td>01/10/2017</td>
-                        <td>£5</td>
-                        <td><a href="claim.html"><button>CLAIM</button></a></td>
+                        <td class="insured">No</td>
+                        <td><button class="insurebut insureclaimbut" value="start">START</button></td>
+                        <td class="fromdate"></td>
+                        <td class="todate"></td>
+                        <td>£<span class="gadgetprice">5</span></td>
+                        <td><a class="claim tohide" href="claim.html?macbook"><button class="insureclaimbut">CLAIM</button></a></td>
                     </tr>
                     
-                    <tr>
+                    <tr class="apple">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr id="Samsung" class="samsung">
                         <td>Samsung 8</td>
-                        <td>No</td>
-                        <td><button>START</button></td>
+                        <td class="insured">Yes</td>
+                        <td><button class="insurebut  insureclaimbut" value="stop">STOP</button></td>
+                        <td class="fromdate"></td>
+                        <td class="todate"></td>
+                        <td>£<span class="gadgetprice">4</span></td>
+                        <td><a class="claim" href="claim.html?samsung"><button class="insureclaimbut">CLAIM</button></a></td>
+                    </tr>
+                    
+                    <tr class="samsung">
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     
-                    <tr>
+                    <tr id="GalaxyTabS3" class="samsung">
                         <td>Galaxy Tab S3</td>
-                        <td>No</td>
-                        <td><button>START</button></td>
+                        <td class="insured">No</td>
+                        <td><button class="insurebut insureclaimbut" value="start">START</button></td>
+                        <td class="fromdate"></td>
+                        <td class="todate"></td>
+                        <td>£<span class="gadgetprice">3</span></td>
+                        <td><a class="claim tohide" href="claim.html?tab"><button class="insureclaimbut">CLAIM</button></a></td>
+                    </tr>
+                    
+                    <tr class="samsung">
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     
-                    <tr>
+                    <tr id="ChromebookPro" class="samsung">
                         <td>Chromebook Pro</td>
-                        <td>No</td>
-                        <td><button>START</button></td>
+                        <td class="insured">No</td>
+                        <td><button class="insurebut insureclaimbut" value="start">START</button></td>
+                        <td class="fromdate"></td>
+                        <td class="todate"></td>
+                        <td>£<span class="gadgetprice">4</span></td>
+                        <td><a class="claim tohide" href="claim.html?chrome"><button class="insureclaimbut">CLAIM</button></a></td>
+                    </tr>
+                    
+                    <tr class="samsung">
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -137,8 +197,9 @@
                 </tbody>
             </table>
         </div>
+        <div class="list-group-item emptyitem samsung apple">You have no registered gadgets!</div>
         <div class="col-sm-offset-4 col-sm-8">
-            <div class="list-group-item emptyitem">Your Direct Debit This Month: £15</div>
+        <div class="list-group-item emptyitem tohide direct pinktext2">Your Direct Debit This Month: £<span id="debitdeposit"></span></div>
         </div>
         </div>
     </div><!-- /.container -->
@@ -159,6 +220,134 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
-
-<span id="sbmarwbthv5"></span></body></html>
+      
+    <!-- Additional JavaScript -->
+    <script src="source/js/main.js"></script>
+      
+    <script>
+        function getdate(a){
+            var b = 1;
+            if(a == 1){
+                b = 2;
+            }
+            var d = new Date();
+            var m = d.getMonth() + b;
+            var c = d.getDate();
+            var t = (('' + c).length<2 ? '0' : '') + c + '/' + (('' + m).length<2 ? '0' : '') + m + '/' + d.getFullYear();
+            return t;
+        }
+        
+        function insurebutbind(thisbut, price){
+            var parent = thisbut.parent().closest('tr').attr('id').split(' ');
+            if(thisbut.val() == "stop"){
+                if(window.sessionStorage){
+                    if(parent == sessionStorage.getItem("gadget1")){
+                        sessionStorage.removeItem("gadget1");
+                    } else if(parent == sessionStorage.getItem("gadget2")){
+                        sessionStorage.removeItem("gadget2");
+                    }
+                }
+                $("#" + parent + " .insured").html("No");
+                $("#" + parent + " .fromdate").html("");
+                $("#" + parent + " .todate").html("");
+                $("#" + parent + " .claim").hide();
+                $("#" + parent + " .insurebut").val("start").html("START");
+                returnprice = price -= parseInt($("#" + parent + " .gadgetprice").html());
+                return returnprice;
+            } else if(thisbut.val() == "start"){
+                if(window.sessionStorage){
+                    if(parent != "Samsung" && parent != "iPhone"){
+                        if(sessionStorage.getItem("gadget1")===null){
+                            sessionStorage.setItem("gadget1", parent);
+                        } else if(sessionStorage.getItem("gadget2")===null){
+                            sessionStorage.setItem("gadget2", parent);
+                        }
+                    }
+                }
+                $("#" + parent + " .insured").html("Yes");
+                $("#" + parent + " .fromdate").html(getdate(0));
+                $("#" + parent + " .todate").html(getdate(1));
+                $("#" + parent + " .claim").show();
+                $("#" + parent + " .insurebut").val("stop").html("STOP");
+                returnprice = price += parseInt($("#" + parent + " .gadgetprice").html());
+                return returnprice;
+            }
+        }
+        
+        $("document").ready(function(){
+            var phone = "";
+            var gadget1 = "";
+            var gadget2 = "";
+            var debitprice = 0;
+            if(window.sessionStorage){
+                phone = sessionStorage.getItem("phone");
+                gadget1 = sessionStorage.getItem("gadget1");
+                gadget2 = sessionStorage.getItem("gadget2");
+                if(phone == "iPhone"){
+                    $(".samsung").hide();
+                    $(".direct").show();
+                    $("#iPhone .fromdate").html(getdate(0));
+                    $("#iPhone .todate").html(getdate(1));
+                    debitprice += 6;
+                    $("#debitdeposit").html(debitprice);
+                    if(gadget1 == "iPadmini4"||gadget1 == "MacBookAir"){
+                        var id1 = "#" + gadget1;
+                        $(id1 + " .insured").html("Yes");
+                        $(id1 + " .fromdate").html(getdate(0));
+                        $(id1 + " .todate").html(getdate(1));
+                        $(id1 + " .insurebut").val("stop").html("STOP");
+                        $(id1 + " .claim").show();
+                        debitprice += parseInt($(id1 + " .gadgetprice").html());
+                        $("#debitdeposit").html(debitprice);
+                    }
+                    if(gadget2 == "iPadmini4"||gadget2 == "MacBookAir"){
+                        var id2 = "#" + gadget2;
+                        $(id2 + " .insured").html("Yes");
+                        $(id2 + " .fromdate").html(getdate(0));
+                        $(id2 + " .todate").html(getdate(1));
+                        $(id2 + " .insurebut").val("stop").html("STOP");
+                        $(id2 + " .claim").show();
+                        debitprice += parseInt($(id2 + " .gadgetprice").html());
+                        $("#debitdeposit").html(debitprice);
+                    }
+                    $(".insurebut").click(function(){
+                        debitprice = insurebutbind($(this), debitprice);
+                        $("#debitdeposit").html(debitprice);
+                    });
+                } else if(phone == "Samsung"){
+                    $(".apple").hide();
+                    $(".direct").show();
+                    $("#Samsung .fromdate").html(getdate(0));
+                    $("#Samsung .todate").html(getdate(1));
+                    debitprice += parseInt($("#Samsung .gadgetprice").html());;
+                    $("#debitdeposit").html(debitprice);
+                    if(gadget1 == "GalaxyTabS3"||gadget1 == "ChromebookPro"){
+                        var id1 = "#" + gadget1;
+                        $(id1 + " .insured").html("Yes");
+                        $(id1 + " .fromdate").html(getdate(0));
+                        $(id1 + " .todate").html(getdate(1));
+                        $(id1 + " .insurebut").val("stop").html("STOP");
+                        $(id1 + " .claim").show();
+                        debitprice += parseInt($(id1 + " .gadgetprice").html());
+                        $("#debitdeposit").html(debitprice);
+                    }
+                    if(gadget2 == "GalaxyTabS3"||gadget2 == "ChromebookPro"){
+                        var id2 = "#" + gadget2;
+                        $(id2 + " .insured").html("Yes");
+                        $(id2 + " .fromdate").html(getdate(0));
+                        $(id2 + " .todate").html(getdate(1));
+                        $(id2 + " .insurebut").val("stop").html("STOP");
+                        $(id2 + " .claim").show();
+                        debitprice += parseInt($(id2 + " .gadgetprice").html());
+                        $("#debitdeposit").html(debitprice);
+                    }
+                    $(".insurebut").click(function(){
+                        debitprice = insurebutbind($(this), debitprice);
+                        $("#debitdeposit").html(debitprice);
+                    });
+                }
+                
+            }
+        });
+    </script>
+</body></html>

@@ -1,7 +1,43 @@
 body {
-  padding-top: 50px;
-  background-color: rgb(204,255,255);
-  min-width: 360px;
+    padding-top: 50px;
+    background-color: rgb(204,255,255);
+    min-width: 360px;
+}
+
+label {
+    color: rgb(51,102,255);
+}
+
+.pinktext {
+    color: rgb(255,153,204);
+}
+
+.pinktext2 {
+    color: rgb(255,0,255);
+}
+
+.purpletext {
+    color: rgb(175,0,171);
+}
+
+.bluetext {
+    color: rgb(51,102,255);
+}
+
+.orangetext {
+    color: rgb(247,150,70) !important;
+}
+
+.redtext {
+    color: rgb(255,0,0) !important;
+}
+
+.boldtext {
+    font-weight: bold;
+}
+
+.paddingzero {
+    padding: 0px !important;
 }
 
 h1 {
@@ -18,6 +54,7 @@ h3 {
 
 h4 {
     font-size: 1.75rem;
+    color: rgb(175,0,171);
 }
 
 h5 {
@@ -33,21 +70,22 @@ p {
 }
 
 li {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .navimage{
 }
 
 .toptitle {
-  background-color: white;
+    background-color: white;
 }
 
 .title {
-  color: fuchsia;
-  text-align: center;
+    color: rgb(255,0,255);
+    text-align: center;
     margin-top: 15px;
     margin-bottom: 15px;
+    font-weight: bold;
 }
 
 .centered {
@@ -58,11 +96,20 @@ li {
 .InsureButton {
     background-color: floralwhite;
     font-size: 16px;
-    border: 2px solid blue;
+    border: 2px solid rgb(74,126,187);
     border-radius: 20%;
     width: 80%;
     height: 20vh;
     margin-top: 5%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    color: blueviolet;
+    font-weight: bold;
+}
+
+.insureclaimbut {
+    background-color: floralwhite;
+    border: 2px solid rgb(74,126,187);
+    border-radius: 20%;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     color: blueviolet;
     font-weight: bold;
@@ -73,12 +120,19 @@ li {
 }
 
 .InsureButton:hover {
-    background-color: deepskyblue;
+    background-color: #b2f6f3;
 }
 
 .InsureButton:active {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
+}
+
+.startedbut {
+    height: 15vh;
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .bottombox {
@@ -104,6 +158,14 @@ li {
     text-align: center;
 }
 
+.tohide {
+    display: none;
+}
+
+.toshow {
+    display: block;
+}
+
 .spaceabove {
     margin-top: 10px;
 }
@@ -114,6 +176,13 @@ li {
 
 .emaillink {
     text-decoration: underline;
+}
+
+#claimref {
+    position: absolute;
+    z-index: 5;
+    height: 95%;
+    width: 95%;
 }
 
 @media (max-width: 768px) {
@@ -129,10 +198,6 @@ li {
     
     .InsureButton {
         height: 25vh;
-    }
-    
-    .InsureButtonMax {
-        width: 100%;
     }
     
     .listprice {
@@ -168,3 +233,9 @@ li {
         font-size: 16px;
     }
 }
+
+.direct {
+    font-weight: bold;
+}
+
+
