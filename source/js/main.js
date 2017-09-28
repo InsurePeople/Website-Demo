@@ -7,7 +7,7 @@ $("document").ready(function(){
                 window.location.replace("get-started.html");
         }
         } else if(sessionStorage.getItem('phone') == null){
-            if(window.location.pathname != "/InsurePeople/get-started.html" && window.location.pathname != "/Website-Demo/insureme.html"){
+            if(window.location.pathname != "/Website-Demo/get-started.html" && window.location.pathname != "/Website-Demo/insureme.html"){
                 window.location.replace("insureme.html");
             }
         }
