@@ -1,0 +1,241 @@
+body {
+    padding-top: 50px;
+    background-color: rgb(204,255,255);
+    min-width: 360px;
+}
+
+label {
+    color: rgb(51,102,255);
+}
+
+.pinktext {
+    color: rgb(255,153,204);
+}
+
+.pinktext2 {
+    color: rgb(255,0,255);
+}
+
+.purpletext {
+    color: rgb(175,0,171);
+}
+
+.bluetext {
+    color: rgb(51,102,255);
+}
+
+.orangetext {
+    color: rgb(247,150,70) !important;
+}
+
+.redtext {
+    color: rgb(255,0,0) !important;
+}
+
+.boldtext {
+    font-weight: bold;
+}
+
+.paddingzero {
+    padding: 0px !important;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.75rem;
+    color: rgb(175,0,171);
+}
+
+h5 {
+    font-size: 1.5rem;
+}
+
+h6 {
+    font-size: 1.25rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+li {
+    font-weight: bold;
+}
+
+.navimage{
+}
+
+.toptitle {
+    background-color: white;
+}
+
+.title {
+    color: rgb(255,0,255);
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.centered {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.InsureButton {
+    background-color: floralwhite;
+    font-size: 16px;
+    border: 2px solid rgb(74,126,187);
+    border-radius: 20%;
+    width: 80%;
+    height: 20vh;
+    margin-top: 5%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    color: blueviolet;
+    font-weight: bold;
+}
+
+.insureclaimbut {
+    background-color: floralwhite;
+    border: 2px solid rgb(74,126,187);
+    border-radius: 20%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    color: blueviolet;
+    font-weight: bold;
+}
+
+.IButtonSpan {
+    color: rgb(51,102,255);
+}
+
+.InsureButton:hover {
+    background-color: #b2f6f3;
+}
+
+.InsureButton:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.startedbut {
+    height: 15vh;
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.bottombox {
+    background-color: white;
+}
+
+.bottom {
+    padding: 2%;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.listprices {
+    text-align: right;
+}
+
+.listprice {
+    padding-left: 20%;
+    padding-right: 10%;
+}
+
+.emptyitem {
+    text-align: center;
+}
+
+.tohide {
+    display: none;
+}
+
+.toshow {
+    display: block;
+}
+
+.spaceabove {
+    margin-top: 10px;
+}
+
+.leftspace {
+    margin-left:5px;
+}
+
+.emaillink {
+    text-decoration: underline;
+}
+
+#claimref {
+    position: absolute;
+    z-index: 5;
+    height: 95%;
+    width: 95%;
+}
+
+@media (max-width: 768px) {
+    .InsureButton {
+        height: 30vh;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+    
+    .InsureButton {
+        height: 25vh;
+    }
+    
+    .listprice {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .listprices {
+        font-weight: normal;
+    }
+}
+
+@media (min-width: 480px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 992px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.direct {
+    font-weight: bold;
+}
+
+

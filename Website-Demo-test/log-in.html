@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.png">
+
+    <title>InsurePeople - Sign In</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Custom styles -->
+     <link rel="stylesheet" href="main.css">
+    
+    <!-- Navbar styles -->
+     <link rel="stylesheet" href="navbar.css">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-custom navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-left navimage" href="index.html"><img src="logonav.png" alt="InsurePeople" height="50" width="100"></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+              <li class="active"><a href="index.html">Home</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="get-started.html">Get Started</a></li>
+            <li><a href="library.html">Policies</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    <div class="toptitle">
+    <div class="container ">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="title">Sign into your InsurePeople Account</h1>
+            </div>
+        </div>
+    </div><!-- /.container -->
+    </div>
+    
+    <div class="container">
+        <div class="col-sm-offset-2 col-md-offset-3 col-sm-8 col-md-6 spaceabove">
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin" id="demosignin">
+                <div class="form-group row">
+                <input type="text" id="inputAccount" class="form-control" placeholder="Email" required autofocus>
+                </div>
+                
+                <div class="form-group row">
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" disabled>
+                </div>
+                
+                <div class="form-group row">
+                <div id="remember" class="checkbox">
+                    <label class="bluetext">
+                        <input type="checkbox" value="remember-me" disabled> Remember me
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+                </div>
+            </form><!-- /form -->
+            <a href="#" class="forgot-password">
+                Forgot the password?
+            </a>
+        </div>
+    </div><!-- /.container -->
+
+    <div class="bottombox"> 
+        <div class="container bottom">
+            <div class=" col-md-offset-2 col-md-8">
+                <p>InsurePeople Limited is registered at Companies House (1087431) and authorised by the Financial Conduct Authority ("FCA"), registration number (xxxxxx). The registration details can be found on www.fca.gov.uk/register. For trading purposes, the registered address is xxxxx, xxx, xxx xxx. </p>   
+            </div>
+        </div><!-- /.container -->
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      
+    <script>
+        $("document").ready(function(){
+            if(window.sessionStorage){
+                if(sessionStorage.getItem("username") != null){
+                    window.location.replace("index.html");
+                }
+            }
+            $("#demosignin").submit(function(e){
+                e.preventDefault();
+                var username = $("#inputAccount").val();
+                if(window.sessionStorage){
+                    sessionStorage.setItem("username", username);
+                }
+                var pagevariable = window.location.search.substring(1);
+                window.location.href = pagevariable;
+            });
+        }); //ready end
+    </script>
+</body></html>
