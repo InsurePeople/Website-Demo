@@ -253,7 +253,6 @@
                 $("#" + parent + " .claim").hide();
                 $("#" + parent + " .insurebut").val("start").html("START");
                 returnprice = price -= parseInt($("#" + parent + " .gadgetprice").html());
-                return returnprice;
             } else if(thisbut.val() == "start"){
                 if(window.sessionStorage){
                     if(parent != "Samsung" && parent != "iPhone"){
@@ -270,8 +269,11 @@
                 $("#" + parent + " .claim").show();
                 $("#" + parent + " .insurebut").val("stop").html("STOP");
                 returnprice = price += parseInt($("#" + parent + " .gadgetprice").html());
-                return returnprice;
             }
+            if(window.sessionStorage){
+                sessionStorage.setItem("total", returnprice);
+            }
+            return returnprice;
         }
         
         $("document").ready(function(){

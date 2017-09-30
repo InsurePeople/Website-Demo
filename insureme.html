@@ -58,15 +58,17 @@
     </div><!-- /.container -->
     </div>
     
-    <div class="container">
+    <div class="container spaceabove">
         <div class=" col-md-offset-2 col-md-8">
         <form class="form-vertical" id="demoinsure">
-            <h4 class="">What's Your Gadget?</h4>
+            <div class="row">
+                <h4 class="">What's Your Gadget?</h4>
+            </div>
             <div class="form-group row">
                 <label class="control-label col-sm-6" for="PhoneType">Select your phone:</label>
                 <div class="col-sm-6">
                     <select class="form-control" id="PhoneType" required>
-                        <option value="">Select one</option>
+                        <option value="" selected>Select one</option>
                         <option value="iPhone">iPhone 7</option>
                         <option value="Samsung">Samsung 8</option>
                     </select>
@@ -86,14 +88,13 @@
                     <div class="list-group-item emptyitem priceshow">Please Select Your Phone Above</div>
                 </div>
             </div>
-
             
             <p class="pinktext">Below are other devices we have found linked to your account, check to include each device in your quote:</p>
             
-            <div class="col-xs-12">
-            <div class="col-sm-offset-3 col-lg-7 col-md-8 col-sm-7"> 
+            <div class="row"> 
+            <div class="col-sm-8 col-sm-offset-2">
             <ul class="list-group listprices gadgetlist">
-                <li class="list-group-item emptyitem empty toshow">None Found</li>
+                <li id="loading" class="list-group-item emptyitem empty">None Found</li>
                 <li id="ipm4" class="list-group-item apple tohide"> iPad mini 4 <span class="listprice">£4 per month</span><input class="itemcheck" type="checkbox" value="4"></li>
                 <li id="mba" class="list-group-item apple tohide">MacBook Air <span class="listprice">£5 per month</span><input class="itemcheck" type="checkbox" value="5"></li>
                 <li id="gts3" class="list-group-item samsung tohide">Galaxy Tab S3 <span class="listprice">£3 per month</span><input class="itemcheck" type="checkbox" value="3"></li>
@@ -102,79 +103,10 @@
             </div>
             </div>
             
-            <h4>Payment Details - First Month Payment</h4>
-                
             <div class="form-group row">
-                <label class="control-label col-sm-5">Type of Card:</label>
-                <div class="col-sm-7">
-                    <select class="form-control" id="PhoneType" disabled>
-                        <option>Select one</option>
-                        <option>MasterCard</option>
-                        <option>Visa</option>
-                    </select>
-                </div>
-            </div>
-            
-            <div class="form-group row">
-                <label class="control-label col-sm-5">Name on Card:</label>
-                <div class="col-sm-7">
-                    <input type="text" class="form-control" placeholder="Card Name" disabled>
-                </div>
-            </div>
-            
-            <div class="form-group row">
-                <label class="control-label col-sm-5">Card Number:</label>
-                <div class="col-sm-7">
-                    <input type="text" class="form-control" placeholder="Card Number" disabled>
-                </div>
-            </div>
-            
-            <div class="form-group row">
-                <label class="control-label col-sm-5">Expiry Date:</label>
-                <div class="col-sm-7">
-                    <input type="date" class="form-control" placeholder="Expiry Date" disabled>
-                </div>
-            </div>
-            
-            <div class="form-group row">
-                <label class="control-label col-sm-6 col-xs-12">3 Digit Security Code:</label>
-                <div class="col-sm-2 col-xs-4">
-                    <input type="text" class="form-control" placeholder="Number" maxlength="1" disabled>
-                </div>
-                <div class="col-sm-2 col-xs-4">
-                    <input type="text" class="form-control" placeholder="Number" maxlength="1" disabled>
-                </div>
-                <div class="col-sm-2 col-xs-4">
-                    <input type="text" class="form-control" placeholder="Number" maxlength="1" disabled>
-                </div>
-            </div>
-            
-            <h4>Direct Debit for Subsequent Months</h4>
-                
-            <div class="form-group row">
-                <label class="control-label col-sm-6 col-xs-12">Sort Code:</label>
-                <div class="col-sm-2 col-xs-4">
-                    <input type="text" class="form-control" placeholder="Number" maxlength="2" disabled>
-                </div>
-                <div class="col-sm-2 col-xs-4">
-                    <input type="text" class="form-control" placeholder="Number" maxlength="2" disabled>
-                </div>
-                <div class="col-sm-2 col-xs-4">
-                    <input type="text" class="form-control" placeholder="Number" maxlength="2" disabled>
-                </div>
-            </div>
-            
-            <div class="form-group row">
-                <label class="control-label col-sm-5">Name on Account:</label>
-                <div class="col-sm-7">
-                    <input type="text" class="form-control" placeholder="Account Name" disabled>
-                </div>
-            </div>
-            
-            <div class="form-group row">
-                <label class="control-label col-sm-5">Account Number:</label>
-                <div class="col-sm-7">
-                    <input type="text" class="form-control" placeholder="Account Number" disabled>
+                <label class="control-label col-sm-6 spaceabove">Total Cover Price:</label>
+                <div class="col-sm-6">
+                    <div class="list-group-item emptyitem totalshow">Please Select Your Devices Above</div>
                 </div>
             </div>
             
@@ -216,7 +148,40 @@
     <script src="source/js/main.js"></script>
       
     <script>
+        function loadingmessage(type){
+            $("#PhoneType").prop("disabled", "disabled");
+            $(".toshow").addClass("tohide");
+            $(".toshow").removeClass("toshow");
+            $("#loading").addClass("toshow");
+            $("#loading").html(" ");
+            var message = "Searching for connected devices...";
+            var characters = 0;
+            var thischaracter = 0;
+            var framespeed = setInterval(frame, 50);
+            function frame(){
+                if(characters >= message.length*3){
+                    clearInterval(framespeed);
+                    $("#loading").html("None Found");
+                    $(".itemcheck").prop('checked', false);
+                    $(".toshow").addClass("tohide");
+                    $(".toshow").removeClass("toshow");
+                    $("." + type).addClass("toshow");
+                    $("#PhoneType").prop("disabled", false);
+                } else {
+                    if(thischaracter > message.length){
+                        $("#loading").html(" ");
+                        thischaracter = 0;
+                    }
+                    $("#loading").append(message[thischaracter]);
+                    characters ++;
+                    thischaracter ++;
+                }
+            }
+        }
+        
         $("document").ready(function(){
+            var applerun = 0;
+            var samsrun = 0;
             $("#PhoneType").change(function(){
                 var price = 0;
                 if($("#PhoneType").val() == ""){
@@ -225,35 +190,42 @@
                     $(".toshow").removeClass("toshow");
                     $(".empty").addClass("toshow");
                     $(".priceshow").html("Please Select Your Phone Above");
-                    
-                }
-                
-                if($("#PhoneType").val() == "iPhone"){
+                    $(".totalshow").html("Please Select Your Devices Above");
+                } else if($("#PhoneType").val() == "iPhone"){
                     price = 5;
-                    $(".itemcheck").prop('checked', false);
-                    $(".toshow").addClass("tohide");
-                    $(".toshow").removeClass("toshow");
-                    $(".apple").addClass("toshow");
-                    $(".priceshow").html("£" + price + " per month");
-                }
-                
-                if($("#PhoneType").val() == "Samsung"){
+                    $(".priceshow, .totalshow").html("£" + price + " per month");
+                    if(applerun == 0){
+                        loadingmessage("apple");
+                        applerun ++;
+                    } else {
+                        $(".itemcheck").prop('checked', false);
+                        $(".toshow").addClass("tohide");
+                        $(".toshow").removeClass("toshow");
+                        $(".apple").addClass("toshow");
+                    }
+                }else if($("#PhoneType").val() == "Samsung"){
                     price = 4;
-                    $(".itemcheck").prop('checked', false);
-                    $(".toshow").addClass("tohide");
-                    $(".toshow").removeClass("toshow");
-                    $(".samsung").addClass("toshow");
-                    $(".priceshow").html("£" + price + " per month");
+                    $(".priceshow, .totalshow").html("£" + price + " per month");
+                    if(samsrun == 0){
+                        loadingmessage("samsung");
+                        samsrun ++;
+                    } else {
+                        $(".itemcheck").prop('checked', false);
+                        $(".toshow").addClass("tohide");
+                        $(".toshow").removeClass("toshow");
+                        $(".samsung").addClass("toshow");
+                    }
+                    
                 }
                 
                 $(".itemcheck").click(function(){
                     var pricevalue = parseInt($(this).val());
                     if($(this).is(':checked')) {
                         price += pricevalue;
-                        $(".priceshow").html("£" + price + " per month");
+                        $(".totalshow").html("£" + price + " per month");
                     } else {
                         price -= pricevalue;
-                        $(".priceshow").html("£" + price + " per month");
+                        $(".totalshow").html("£" + price + " per month");
                     }
                 });
                 
@@ -261,6 +233,7 @@
                     e.preventDefault();
                     if(window.sessionStorage){
                         sessionStorage.setItem("phone", $("#PhoneType").val());
+                        sessionStorage.setItem("total", price);
                     }
                     var gadget = 1;
                     $(".gadgetlist input:checkbox:checked").each(function() {
@@ -279,7 +252,7 @@
                         }
                         gadget += 1;
                     }
-                    window.location.href = "myinsurancechain.html";
+                    window.location.href = "payment.html";
                 });
             });
         });
