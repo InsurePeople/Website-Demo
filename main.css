@@ -1,19 +1,96 @@
+
+:root {
+  --main-bg-color: rgb(84,86,89);
+    --main-btn-color: rgb(79, 79, 81);
+    --control-background-color: rgb(79, 79, 81);
+    --disabled-background-color: rgb(132, 132, 138);
+    --main-hover-color: rgb(17, 17, 17);
+    --color-dark: rgb(22, 22, 24);
+   --main-color: rgb(21, 22, 22);
+   --text-color: rgb(244, 244, 247);
+   --text-color-dark: rgb(173, 169, 169);
+   --color-insure-people: rgb(255,119,251);
+    --color-dark-50: rgba(173, 169, 169,0.5);
+    --global-padding: 10px;
+    --global-margin: 10px;
+}
 body {
     padding-top: 50px;
-    background-color: rgb(204,255,255);
+      background-color: var(--main-bg-color);
     min-width: 360px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.page-container {
+    /* display: flex;
+    flex-direction: column;  */
+     display: flex;
+  flex-flow: row wrap;
+}
+.table-responsive{
+    margin-left: 30px;
+}
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: var(--control-background-color);
+}
+.pad-control {
+    margin-right: var(--global-padding);
+}
+.main-component {
+    /* align-self: flex-end;
+    margin: auto; */
+    flex: 1 100%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+.toptitle {
+    background-color: var(--main-bg-color);
+      width:100%;
+    flex: 1 100%;
+}
+.bottombox {
+    background-color: var(--main-bg-color);
+    align-self: flex-end;
+    width:100%;
+    flex: 1 100%;
+    margin-top: 5%;
+    /* margin: auto;
+    --margin-top: 80px;
+    max-height: 100px; */
+}
+
+.bottom {
+    width:100%;
+    padding: 2%;
+    --margin-top: 5%;
+    text-align: center;
+    color: var(--text-color-dark);
+    font-size: 10px;
+}
+
+
+/* Large screens */
+ @media all and (min-width: 800px) {
+  /* We invert order of first sidebar and main
+   * And tell the main element to take twice as much width as the other two sidebars 
+   */
+  /* .main-component { flex: 2 0px; }
+   .toptitle    { order: 1; }
+  .main-component    { order: 2; }
+  .bottombox  { order: 3; } */
+} 
 label {
-    color: rgb(51,102,255);
+    color: var(--text-color);
 }
-
+.text-action {
+    color: var(--color-insure-people);
+}
 .pinktext {
-    color: rgb(255,153,204);
+    color: var(--text-color);
 }
 
 .pinktext2 {
-    color: rgb(255,0,255);
+    color: var(--text-color);
 }
 
 .purpletext {
@@ -26,6 +103,10 @@ label {
 
 .orangetext {
     color: rgb(247,150,70) !important;
+}
+
+.info-text {
+    color: var(--text-color);
 }
 
 .redtext {
@@ -41,15 +122,18 @@ label {
 }
 
 .borderleft {
-    border-left: 2px solid #ddd;
+    border-left: 2px solid var(--color-dark-50);
 }
 
 .borderright {
-    border-right: 2px solid #ddd;
+    border-right: 2px solid var(--color-dark-50)
 }
 
 .borderabove {
-    border-top: 2px solid #ddd;
+    border-top: 2px solid var(--color-dark-50);
+}
+.border-top-fine {
+    border-top: 1px solid var(--color-dark-50);
 }
 
 .noborder {
@@ -70,7 +154,7 @@ h3 {
 
 h4 {
     font-size: 1.75rem;
-    color: rgb(175,0,171);
+    color: var(--text-color);
 }
 
 h5 {
@@ -82,7 +166,9 @@ h6 {
 }
 
 p {
-    font-size: 1rem;
+    font-size: 0.75rem;
+    margin: var(--global-margin) 0 var(--global-margin);
+    text-align: center;
 }
 
 li {
@@ -92,43 +178,46 @@ li {
 .navimage{
 }
 
-.toptitle {
-    background-color: white;
-}
 
 .title {
-    color: rgb(255,0,255);
+    color: var(--text-color);
     text-align: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    /* margin-top: 15px;
+    margin-bottom: 15px; */
     font-weight: bold;
 }
 
 .centered {
     text-align: center;
-    margin-top: 5%;
+    /* --margin-top: 5%; */
 }
 
 .InsureButton {
-    background-color: floralwhite;
+    background-color: var(--main-btn-color);
     font-size: 16px;
-    border: 2px solid rgb(74,126,187);
-    border-radius: 20%;
+    /* border: 2px solid rgb(74,126,187);*/
+    /* border-radius: 5%;  */
     width: 80%;
     height: 20vh;
     margin-top: 5%;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    color: blueviolet;
+    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    color: blueviolet; */
     font-weight: bold;
 }
-
+button {
+    border: 0;
+}
 .insureclaimbut {
-    background-color: floralwhite;
-    border: 2px solid rgb(74,126,187);
-    border-radius: 20%;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    color: blueviolet;
+    background-color: var(--control-background-color);
+    color: var(--text-color);
+    /* border: 2px solid rgb(74,126,187);
+    border-radius: 20%; */
+    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    color: blueviolet; */
     font-weight: bold;
+}
+.insureclaimbut:hover{
+    background-color: var(--main-hover-color);
 }
 
 .IButtonSpan {
@@ -136,7 +225,7 @@ li {
 }
 
 .InsureButton:hover {
-    background-color: #b2f6f3;
+    background-color: var(--main-hover-color);
 }
 
 .InsureButton:active {
@@ -151,40 +240,57 @@ li {
     padding-bottom: 5%;
 }
 
-.bottombox {
-    background-color: white;
-}
-
-.bottom {
-    padding: 2%;
-    margin-top: 5%;
-    text-align: center;
-}
 
 .listprices {
     text-align: center;
 }
 
 .listprice {
-    padding-left: 20%;
-    padding-right: 10%;
+    width: 110px;
+    text-align: left;
 }
 
 .emptyitem {
     text-align: center;
     min-height: 3em;
+    background-color: var(--control-background-color);
+    color: var(--text-color);
+    border: 0;
+    padding-top: var(--global-padding);
 }
-
-
 
 .tohide {
     display: none;
 }
-
-.toshow {
-    display: block;
+.sort-code{
+    display: flex;
+    justify-content: space-between;
+    --margin-bottom: 15px;
+}
+.col-sm-5, .col-sm-6, .col-sm-7, 
+.col-sm-12, .col-xs-12, .col-xs-11 {
+        padding-right: 0;
+    padding-left: 0;
 }
 
+.toshow {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--main-btn-color);
+    border: 0;
+    color: var(--text-color);
+}
+
+.form-control {
+    background-color: var(--control-background-color);
+    color: var(--text-color);
+    border: 0;
+    border-radius: 0px;
+}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: var(--disabled-background-color);
+    opacity: 1;
+}
 .spaceabove {
     margin-top: 10px;
 }
@@ -256,9 +362,14 @@ li {
 .direct {
     font-weight: bold;
 }
-
+.modal-content{
+    height: 500px;
+    opacity: 0.9;
+    background-color: black;
+}
 #gadgetcalculator {
-    background: rgb(204,255,204);
+/*     
+   background: var(--disabled-background-color); */
     position: absolute;
     z-index: 5;
     height: 95%;
@@ -272,12 +383,12 @@ li {
 }
 
 .closebutton {
-    border: 2px solid black;
-    color: black;
-    background: white;
-    height: 4vh;
-    min-height: 35px;
-    width: 100%;
+    color: white;
+    background: transparent;
+    margin-top: var(--global-margin);
+    margin-left: var(--global-margin);
+    position: absolute;
+    left: 72px
 }
 
 .popuphelp {

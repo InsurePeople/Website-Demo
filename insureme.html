@@ -82,37 +82,42 @@
                 </div>
             </div>
                 
-            <div class="form-group row">
+            <div class="row">
                 <label class="control-label col-sm-6 spaceabove">Gadget Cover Price:</label>
                 <div class="col-sm-6">
-                    <div class="list-group-item emptyitem priceshow">Please Select Your Phone Above</div>
+                    <div class="info-text emptyitem priceshow">Please Select Your Phone Above</div>
                 </div>
             </div>
             
             <p class="pinktext">Below are other devices we have found linked to your account, check to include each device in your quote:</p>
             
             <div class="row"> 
-            <div class="col-sm-8 col-sm-offset-2">
+            <div class="col-sm-12">
             <ul class="list-group listprices gadgetlist">
                 <li id="loading" class="list-group-item emptyitem empty">None Found</li>
-                <li id="ipm4" class="list-group-item apple tohide"> iPad mini 4 <span class="listprice">£4 per month</span><input class="itemcheck" type="checkbox" value="4"></li>
-                <li id="mba" class="list-group-item apple tohide">MacBook Air <span class="listprice">£5 per month</span><input class="itemcheck" type="checkbox" value="5"></li>
-                <li id="gts3" class="list-group-item samsung tohide">Galaxy Tab S3 <span class="listprice">£3 per month</span><input class="itemcheck" type="checkbox" value="3"></li>
-                <li id="cbp" class="list-group-item samsung tohide">Chromebook Pro <span class="listprice">£4 per month</span><input class="itemcheck" type="checkbox" value="4"></li>
+                <li id="ipm4" class="list-group-item apple tohide">
+                        <span class="listprice">iPad mini 4</span>
+                    <span class="listprice">£4 per month</span><input class="itemcheck" type="checkbox" value="4"></li>
+                <li id="mba" class="list-group-item apple tohide">
+                        <span class="listprice">MacBook Air</span><span class="listprice">£5 per month</span><input class="itemcheck" type="checkbox" value="5"></li>
+                <li id="gts3" class="list-group-item samsung tohide">
+                        <span class="listprice">Galaxy Tab S3</span><span class="listprice">£3 per month</span><input class="itemcheck" type="checkbox" value="3"></li>
+                <li id="cbp" class="list-group-item samsung tohide">
+                        <span class="listprice">Chromebook Pro</span><span class="listprice">£4 per month</span><input class="itemcheck" type="checkbox" value="4"></li>
             </ul>
             </div>
             </div>
-            
+                
             <div class="form-group row">
                 <label class="control-label col-sm-6 spaceabove">Total Cover Price:</label>
                 <div class="col-sm-6">
-                    <div class="list-group-item emptyitem totalshow">Please Select Your Devices Above</div>
+                    <div class="info-text emptyitem totalshow">Please Select Your Devices Above</div>
                 </div>
             </div>
             
             <div class="form-group row">
                 <label class="col-xs-12 pinktext">Do you allow us to lock your gadget in the event of loss or theft? Activated through a claim.</label>
-                <div class="col-xs-offset-1 col-xs-11">
+                <div class="col-xs-11">
                     <div class="form-check">
                         <label class="form-check-label pinktext">
                             <input class="form-check-input" type="checkbox" disabled> Tick to confim agreement
@@ -121,8 +126,13 @@
                 </div>
             </div>
 
-            <div class="col-sm-6 col-xs-12"><button type="submit" class="InsureButton startedbut"><h4>Confirm Purchase</h4><small class="bluetext"> Proceed to your cover overview</small></button></div>
-            
+            <div class="row">
+                <div class="col-sm-6"></div>
+                <div class="col-sm-6"><button type="submit" class="InsureButton startedbut">
+                    <h4 class="text-action">Confirm Purchase</h4>
+                    <!-- <small class="bluetext"> Proceed to your cover overview</small> -->
+                </button></div>
+            </div>
         </form>
         </div>
     </div><!-- /.container -->
