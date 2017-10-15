@@ -22,8 +22,6 @@ body {
 }
 
 .page-container {
-    /* display: flex;
-    flex-direction: column;  */
      display: flex;
   flex-flow: row wrap;
 }
@@ -37,8 +35,6 @@ body {
     margin-right: var(--global-padding);
 }
 .main-component {
-    /* align-self: flex-end;
-    margin: auto; */
     flex: 1 100%;
     margin-top: 2%;
     margin-bottom: 5%;
@@ -54,9 +50,6 @@ body {
     width:100%;
     flex: 1 100%;
     margin-top: 5%;
-    /* margin: auto;
-    --margin-top: 80px;
-    max-height: 100px; */
 }
 
 .bottom {
@@ -71,13 +64,7 @@ body {
 
 /* Large screens */
  @media all and (min-width: 800px) {
-  /* We invert order of first sidebar and main
-   * And tell the main element to take twice as much width as the other two sidebars 
-   */
-  /* .main-component { flex: 2 0px; }
-   .toptitle    { order: 1; }
-  .main-component    { order: 2; }
-  .bottombox  { order: 3; } */
+
 } 
 label {
     color: var(--text-color);
@@ -200,8 +187,6 @@ li {
     width: 80%;
     height: 20vh;
     margin-top: 5%;
-    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    color: blueviolet; */
     font-weight: bold;
 }
 button {
@@ -210,10 +195,6 @@ button {
 .insureclaimbut {
     background-color: var(--control-background-color);
     color: var(--text-color);
-    /* border: 2px solid rgb(74,126,187);
-    border-radius: 20%; */
-    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    color: blueviolet; */
     font-weight: bold;
 }
 .insureclaimbut:hover{
@@ -368,8 +349,6 @@ button {
     background-color: black;
 }
 #gadgetcalculator {
-/*     
-   background: var(--disabled-background-color); */
     position: absolute;
     z-index: 5;
     height: 95%;
