@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.png">
+
+    <title>InsurePeople - Claim History</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Custom styles -->
+     <link rel="stylesheet" href="main.css">
+    
+    <!-- Navbar styles -->
+     <link rel="stylesheet" href="navbar.css">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-custom navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-left navimage" href="index.html"><img src="logonav.png" alt="InsurePeople" height="50" width="100"></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="get-started.html">Get Started</a></li>
+            <li class="active"><a href="library.html">Policies</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    <div class="toptitle">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="title">Claim History <br><small>See your previous claims here</small></h1>
+            </div>
+        </div>
+    </div><!-- /.container -->
+    </div>
+    
+    <div class="container">
+        <div class=" col-md-offset-2 col-md-8">
+        <div class="table-responsive">
+            <table id="demohistory" class="table table-striped table-hover bluetext spaceabove">
+                <thead>
+                    <tr>
+                        <th>My Gadget</th>
+                        <th></th>
+                        <th>Claim Ref</th>
+                        <th></th>
+                        <th>Date</th>
+                        <th></th>
+                        <th>Amount Paid</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr id="startrow">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+            <div id="noclaims" class="list-group-item emptyitem">You have made no claims!</div>
+        </div>
+    </div><!-- /.container -->
+
+    <div class="bottombox"> 
+        <div class="container bottom">
+            <div class=" col-md-offset-2 col-md-8">
+                <p>InsurePeople Limited is registered at Companies House (1087431) and authorised by the Financial Conduct Authority ("FCA"), registration number (xxxxxx). The registration details can be found on www.fca.gov.uk/register. For trading purposes, the registered address is xxxxx, xxx, xxx xxx. </p>   
+            </div>
+        </div><!-- /.container -->
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      
+    <!-- Additional JavaScript -->
+    <script src="source/js/main.js"></script>
+      
+    <script>
+        function getdate(a){
+            var b = 1;
+            if(a == 1){
+                b = 2;
+            }
+            var d = new Date();
+            var m = d.getMonth() + b;
+            var c = d.getDate();
+            var t = (('' + c).length<2 ? '0' : '') + c + '/' + (('' + m).length<2 ? '0' : '') + m + '/' + d.getFullYear();
+            return t;
+        }
+        
+        $("document").ready(function(){
+            if(window.sessionStorage){
+                if(sessionStorage.getItem("REF001")!=null){
+                    $("#startrow, #noclaims").remove();
+                    var ref = "";
+                    for (var i = 1; i < sessionStorage.length; i++){
+                        if(i.toString().length == 1){
+                            ref = "00";
+                        } else if(i.toString().length == 2){
+                            ref="0";
+                        } else {ref = "";}
+                        var refnum = "REF" + ref + i;
+                        if(sessionStorage.getItem(refnum)!=null){
+                            var tableadd ="<tr><td>" + sessionStorage.getItem(refnum) + "</td><td></td><td>" + refnum + "</td><td></td><td>" + getdate(0) + "</td><td></td><td>" + sessionStorage.getItem(refnum + "price") + "</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>";
+                            $("#demohistory").append(tableadd);
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body></html>
