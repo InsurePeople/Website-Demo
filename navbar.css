@@ -18,16 +18,26 @@
 .navbar-custom .navbar-nav > li > a:hover,
 .navbar-custom .navbar-nav > li > a:focus {
    color: var(--text-color);
-  background-color: var(--main-hover-color);
+   background-color: var(--main-hover-color);
 }
-
+.navbar-custom .navbar-nav > .active > a,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus {
+   background-color: var(--disabled-background-color);
+}
 @media (max-width: 767px) {
+  .navbar-custom .navbar-toggle .icon-bar {
+    background-color: var(--text-color);
+  }
+  .navbar-custom .navbar-toggle {
+    border-color: var(--color-dark-50);
+  }
   .navbar-custom .navbar-nav .open .dropdown-menu > li > a {
-  color: var(--text-color);;
+    color: var(--text-color);;
   }
   .navbar-custom .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-custom .navbar-nav .open .dropdown-menu > li > a:focus {
-     color: var(--text-color);
+    color: var(--text-color);
   }
   .navbar-custom .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-custom .navbar-nav .open .dropdown-menu > .active > a:hover,

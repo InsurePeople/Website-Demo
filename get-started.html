@@ -49,7 +49,7 @@
     </nav>
     
     <div class="toptitle">
-    <div class="container ">
+    <div class="container">
         <div class="row">
             <div class="col-xs-12">
                 <h1 class="title">Get Started With an Instant Quote <small><br>The more you tell us, the better your quote!</small></h1>
@@ -59,16 +59,22 @@
     </div>
     
     <div class="container">
-        <div class=" col-md-offset-2 col-md-8">
-            <button id="claimref" class="InsureButton tohide">
-                <h4>My Profile Score</h4><br>
-                <span class="IButtonSpan">Clearscore:</span>
-                <div id="clearscore" class="list-group-item emptyitem pinktext">100 - Top 20% of users</div><br>
-                <span class="IButtonSpan">Total Profile Score:</span>
-                <div id="totalscore" class="list-group-item emptyitem pinktext">Awaiting Confirmation</div><br><br>
-                <span class="IButtonSpan">Click to continue to insure your gadgets now!</span><br><br>
-                <div class="pinktext">Or go to Policies to see how your Profile Score is calculated</div>
-            </button>
+        <div class="col-md-offset-2 col-md-8">
+            <div id="profModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <button id="claimref" class="InsureButton">
+                        <h4>My Profile Score</h4><br>
+                        <span class="IButtonSpan">Clearscore:</span>
+                        <div id="clearscore" class="list-group-item emptyitem pinktext">100 - Top 20% of users</div><br>
+                        <span class="IButtonSpan">Total Profile Score:</span>
+                        <div id="totalscore" class="list-group-item emptyitem pinktext">Awaiting Confirmation</div><br><br>
+                        <span class="IButtonSpan">Click to continue to insure your gadgets now!</span><br><br>
+                        <div class="pinktext">Or go to Policies to see how your Profile Score is calculated</div>
+                    </button>
+                </div>
+                </div>
+            </div>
             
         <form id="demodetails" class="form-vertical">
             <h3 class="bluetext">Registration Questions: <br><small class="pinktext">Please fill in all fields below.</small></h3>
@@ -81,7 +87,9 @@
             </div>
             
             <div class="row">
-            <div class="popuphelp">For this Demo, any fields that don't demonstrate functionality have been disabled. To continue, simply type anything into this field and press return or 'sign in'. Typing anything into the 'Identification' and 'Social Media Accounts' fields below adds to your 'profile score' used in this demo.</div>
+            <div class="popuphelp">
+                For this Demo, any fields that don't demonstrate functionality have been disabled. To continue, simply type anything into this field and press return or 'sign in'. Typing anything into the 'Identification' and 'Social Media Accounts' fields below adds to your 'profile score' used in this demo.
+                </div>
             </div>
             
             <div class="form-group row">
@@ -164,15 +172,16 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="col-sm-6 col-xs-12"><button class="InsureButton startedbut" type="submit"><h4>Confirm Details</h4><br><small class="bluetext"> Continue to see your profile score</small></button></div>
+            <div class="col-sm-6">
+            </div>
+            <div class="col-sm-6"><button class="InsureButton startedbut" type="submit"><h4 class="text-action">Confirm Details</h4><br><small class="bluetext"> Continue to see your profile score</small></button></div>
         </form>
         </div>
     </div><!-- /.container -->
 
     <div class="bottombox"> 
         <div class="container bottom">
-            <div class=" col-md-offset-2 col-md-8">
+            <div class="col-md-offset-2 col-md-8">
                 <p>InsurePeople Limited is registered at Companies House (1087431) and authorised by the Financial Conduct Authority ("FCA"), registration number (xxxxxx). The registration details can be found on www.fca.gov.uk/register. For trading purposes, the registered address is xxxxx, xxx, xxx xxx. </p>   
             </div>
         </div><!-- /.container -->
@@ -194,7 +203,7 @@
     <script>
         $("document").ready(function(){
             $("#demodetails").submit(function(e){
-                $("#claimref").show();
+                $("#profModal").modal();
                 e.preventDefault();
                 var identification = 0;
                 var socialmedia = 0;
