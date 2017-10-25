@@ -119,15 +119,12 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      
+    <!-- Additional JavaScript -->
+    <script src="source/js/main.js"></script>
+      
     <script>
         $("document").ready(function(){
-            if(window.sessionStorage){
-                if(sessionStorage.getItem('username') == null){
-                    window.location.replace("log-in.html?" + $(location).attr('href'));
-                } else if(sessionStorage.getItem('idval') == null){
-                    window.location.replace("get-started.html");
-                }
-            }
             var userscore = 0;
             var idscore = 0;
             var socialscore = 0;

@@ -201,15 +201,16 @@
                     $(".samsung").hide();
                     if(gadget1 != "iPadmini4" && gadget2 != "iPadmini4"){
                         $("#GadgetChoice option[value=ipad").hide();
-                        if(gadget1 != "MacBookAir" && gadget2 != "MacBookAir"){
-                            $("#GadgetChoice option[value=macbook").hide();
-                        }
+                    }
+                    if(gadget1 != "MacBookAir" && gadget2 != "MacBookAir"){
+                        $("#GadgetChoice option[value=macbook").hide();
                     }
                 } else if(sessionStorage.getItem("phone") == "Samsung"){
                     $(".apple").hide();
                     if(gadget1 != "GalaxyTabS3" && gadget2 != "GalaxyTabS3"){
                         $("#GadgetChoice option[value=tab").hide();
-                    } else if(gadget1 != "ChromebookPro" && gadget2 != "ChromebookPro"){
+                    }
+                    if(gadget1 != "ChromebookPro" && gadget2 != "ChromebookPro"){
                         $("#GadgetChoice option[value=chrome").hide();
                     }
                 }
