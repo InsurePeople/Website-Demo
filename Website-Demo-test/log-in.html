@@ -63,7 +63,10 @@
             <p id="profile-name" class="profile-name-card"></p>
             <form class="form-signin" id="demosignin">
                 <div class="form-group row">
-                <input type="text" id="inputAccount" class="form-control" placeholder="Email" required autofocus>
+                <input type="text" id="inputAccount" class="form-control popuppointer" placeholder="Email" autocomplete="off" required>
+                </div>
+                <div class="row">
+                <div class="popuphelp">For this Demo, any forms that don't demonstrate functionality have been disabled. To continue, simply type anything into this form and press return or 'sign in'.</div>
                 </div>
                 
                 <div class="form-group row">
@@ -101,6 +104,9 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!-- Additional JavaScript -->
+    <script src="source/js/main.js"></script>
       
     <script>
         $("document").ready(function(){
