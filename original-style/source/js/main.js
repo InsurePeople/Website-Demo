@@ -4,8 +4,8 @@
               sessionStorage.setItem('username', "aaa");
          }
          if(sessionStorage.getItem('idval') == null){
-              sessionStorage.setItem('idval', Math.floor(Math.random() * 3));
-              sessionStorage.setItem('socval', Math.floor(Math.random() * 3));
+              sessionStorage.setItem('idval', Math.floor(Math.random() * 3) + 1);
+              sessionStorage.setItem('socval', Math.floor(Math.random() * 3) + 1);
          }
          if(sessionStorage.getItem('phone') == null){
               sessionStorage.setItem('phone', "iPhone");
