@@ -60,8 +60,15 @@
     
     <div class="container">
         <div class="col-md-offset-2 col-md-8 col-xs-12">
-            <button id="claimref" class="InsureButton tohide">
-                Your Claim (<span id="refnumplace">REF 001</span>) Has Been Accepted!<br><br>
+        <div id="claimModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <button id="claimref" class="InsureButton">
+                <h5>
+                Your Claim (<span id="refnumplace">REF 001</span>) Has Been Accepted!
+                </h5>
+                <br>
+                <br>
                 <div class="col-xs-8"><span class="pinktext2">Total Amount:</span></div>
                 <div class="col-xs-2"><span class="pinktext2">£<span id="priceplace">500</span></span></div>
                 <br>
@@ -70,8 +77,12 @@
                 <br>
                 <div class="col-xs-8"><span class="pinktext2">Paid to your account:</span></div>
                 <div class="col-xs-2"><span class="pinktext2"><br>£<span id="paidplace">450</span></span></div>
-                <div class="col-xs-12"><span class="IButtonSpan"><br>Click to return to MyInsuranceChain</span></div>
+                <div class="col-xs-12"><h5><span class="IButtonSpan"><br>Click to return to MyInsuranceChain</span></h5></div>
             </button>
+        </div>
+        </div>
+        </div>
+            
         <form id ="democlaim" class="form-vertical">
             <h4>My Claim</h4>
             <div class="form-group row">
@@ -90,7 +101,7 @@
             </div>
             
             <div>
-                <h5 class="purpletext">Our Questions</h5>
+                <h5 class="pinktext">Our Questions</h5>
             </div>
             
             <div class="form-group row">
@@ -141,8 +152,10 @@
                 </div>
             </div>
             
-            <div class="col-sm-6 col-xs-12">
-                <button type="submit" class="InsureButton startedbut">Make Claim</button>
+            
+            <div class="col-sm-6"></div>
+            <div class="col-sm-6">
+                <button type="submit" class="InsureButton startedbut text-action">Make Claim</button>
             </div>
         </form>
         
@@ -188,22 +201,23 @@
                     $(".samsung").hide();
                     if(gadget1 != "iPadmini4" && gadget2 != "iPadmini4"){
                         $("#GadgetChoice option[value=ipad").hide();
-                        if(gadget1 != "MacBookAir" && gadget2 != "MacBookAir"){
-                            $("#GadgetChoice option[value=macbook").hide();
-                        }
+                    }
+                    if(gadget1 != "MacBookAir" && gadget2 != "MacBookAir"){
+                        $("#GadgetChoice option[value=macbook").hide();
                     }
                 } else if(sessionStorage.getItem("phone") == "Samsung"){
                     $(".apple").hide();
                     if(gadget1 != "GalaxyTabS3" && gadget2 != "GalaxyTabS3"){
                         $("#GadgetChoice option[value=tab").hide();
-                    } else if(gadget1 != "ChromebookPro" && gadget2 != "ChromebookPro"){
+                    }
+                    if(gadget1 != "ChromebookPro" && gadget2 != "ChromebookPro"){
                         $("#GadgetChoice option[value=chrome").hide();
                     }
                 }
             }
             $("#democlaim").submit(function(e){
                 e.preventDefault();
-                $("#claimref").show();
+                $("#claimModal").modal();
                 if(window.sessionStorage){
                     var ref = "";
                     for (var i = 1; i < sessionStorage.length; i++){
