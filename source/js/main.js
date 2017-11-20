@@ -12,11 +12,13 @@
               sessionStorage.setItem('total', 5);
          }
       }
-     setTimeout(function(){ $(".popuppointer").focus(); }, 2000);
+     setTimeout(function(){ $(".popuppointerfirst").focus(); }, 1000);
      $(".popuppointer").focus(function(){
-        $(".popuphelp").fadeIn();
+         var popup = "#" + this.id + "popup";
+        $(popup).fadeIn();
+        setTimeout(function(){ $(popup).fadeOut(); }, 4000);
      });
      $(".popuppointer").focusout(function(){
-        $(".popuphelp").fadeOut();
+        $("#" + this.id + "popup").fadeOut();
      });
  });

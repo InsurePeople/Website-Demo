@@ -21,6 +21,11 @@ body {
     min-width: 360px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.modal-admin {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
 h1>small{
     color: var(--text-color);
 }
@@ -60,7 +65,6 @@ h1>small{
     flex: 1 100%;
     margin-top: 5%;
 }
-
 .bottom {
     width:100%;
     padding: 2%;
@@ -75,6 +79,10 @@ h1>small{
 .dangerbord {
     background-color: var(--color-border-danger) !important;
 }
+.nomargin {
+    margin: 0 !important;
+}
+
 /* Large screens */
  @media all and (min-width: 800px) {
 
@@ -164,6 +172,7 @@ h5 {
 
 h6 {
     font-size: 1.25rem;
+    color: var(--text-color);
 }
 
 p {
@@ -338,6 +347,11 @@ button {
     .listprices {
         font-weight: normal;
     }
+    .modal-admin {
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
 }
 
 @media (min-width: 480px) {
@@ -392,7 +406,7 @@ button {
     left: 72px
 }
 
-.popuphelp {
+.popup {
     display: none;
     width: 100%;
     text-align: center;
@@ -404,7 +418,7 @@ button {
     border: 2px solid var(--color-dark);
 }
 
-.popuphelp::before {
+.popup::before {
     content: "";
     position: absolute;
     bottom: 90%;
@@ -414,3 +428,37 @@ button {
     border-style: solid;
     border-color: var(--main-hover-color) transparent transparent transparent;
 }
+.bloglink {
+    background-color: var(--main-btn-color);
+    height: 25vh;
+    width: 80%;
+    margin-bottom: 5%;
+    color: var(--text-color);
+}
+
+.bloglink:hover {
+    background-color: var(--main-hover-color);
+}
+
+.bloglink:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.blogoverlay {
+    position: absolute;
+    width: 100%;
+    background: var(--main-color);
+    padding: 5px;
+}
+
+
+
+.blogmove {
+    width: 100%;
+    color: var(--text-color);
+    background: var(--main-btn-color);
+    padding: 2%;
+}
+
+

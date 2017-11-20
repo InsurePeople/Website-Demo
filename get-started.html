@@ -82,12 +82,11 @@
             <div class="form-group row">
                 <div class="input-group">
                     <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                    <input type="text" class="form-control popuppointer" id="inputName" placeholder="Full Name" autocomplete="off" required>
+                    <input type="text" class="form-control popuppointer popuppointerfirst" id="inputName" placeholder="Full Name" autocomplete="off" required>
                 </div>
             </div>
-            
             <div class="row">
-            <div class="popuphelp">
+            <div class="popup" id="inputNamepopup">
                 For this Demo, any fields that don't demonstrate functionality have been disabled. To continue, simply type anything into this field and press return or 'sign in'. Typing anything into the 'Identification' and 'Social Media Accounts' fields below adds to your 'profile score' used in this demo.
                 </div>
             </div>
@@ -119,24 +118,41 @@
             <div class="form-group row">
                 <div class="input-group">
                     <span class="input-group-addon"><span class="glyphicon glyphicon-road"></span></span>
-                    <input type="text" class="form-control" id="inputDLN" placeholder="Driving License Number"  autocomplete="off">
+                    <input type="text" class="form-control popuppointer" id="inputDLN" placeholder="Driving License Number"  autocomplete="off">
+                </div>
+            </div>
+            
+            <div class="row">
+            <div class="popup" id="inputDLNpopup">
+                Your Driving licence number will be checked against the DVLA database.
                 </div>
             </div>
             
             <div class="form-group row">
                 <div class="input-group">
                     <span class="input-group-addon"><span class="glyphicon glyphicon-plane"></span></span>
-                    <input type="text" class="form-control" id="inputPPort" placeholder="Passport Number"  autocomplete="off">
+                    <input type="text" class="form-control popuppointer" id="inputPPort" placeholder="Passport Number"  autocomplete="off">
                 </div>
             </div>
            
-            <div class="form-group row">
-                <div class="input-group">
-                    <span class="input-group-addon"><span class="glyphicon glyphicon-credit-card"></span></span>
-                    <input type="text" class="form-control" id="inputNIN" placeholder="National Insurance Number"  autocomplete="off">
+            <div class="row">
+            <div class="popup" id="inputPPortpopup">
+                Your Passport number will be checked against HM Passport Office database.
                 </div>
             </div>
             
+            <div class="form-group row">
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-credit-card"></span></span>
+                    <input type="text" class="form-control popuppointer" id="inputNIN" placeholder="National Insurance Number"  autocomplete="off">
+                </div>
+            </div>
+            
+            <div class="row">
+            <div class="popup" id="inputNINpopup">
+                Your National Insurance number will be checked against HMRC National Insurance records.
+                </div>
+            </div>
             
             <h5 class="bluetext">Social Media Accounts<br>
             <small class="pinktext">Do you allow us to look at your social media accounts? We will not post on your social media accounts and will not keep any data. We view your accounts for profiling purposes only once registered.</small></h5>
@@ -144,21 +160,39 @@
             <div class="form-group row">
                 <div class="input-group">
                     <span class="input-group-addon"><span class="glyphicon glyphicon-book"></span></span>
-                    <input type="text" class="form-control" id="inputFace" placeholder="Facebook Profile Name"  autocomplete="off">
+                    <input type="text" class="form-control popuppointer" id="inputFace" placeholder="Facebook Profile Name"  autocomplete="off">
+                </div>
+            </div>
+            
+            <div class="row">
+            <div class="popup" id="inputFacepopup">
+                Your Facebook account will be analysed using our automated tool.
                 </div>
             </div>
             
             <div class="form-group row">
                 <div class="input-group">
                     <span class="input-group-addon"><span class="glyphicon glyphicon-refresh"></span></span>
-                    <input type="text" class="form-control" id="inputTwit" placeholder="Twitter Handle"  autocomplete="off">
+                    <input type="text" class="form-control popuppointer" id="inputTwit" placeholder="Twitter Handle"  autocomplete="off">
+                </div>
+            </div>
+            
+            <div class="row">
+            <div class="popup" id="inputTwitpopup">
+                Your Twitter account will be analysed using our automated tool.
                 </div>
             </div>
             
             <div class="form-group row">
                 <div class="input-group">
                     <span class="input-group-addon"><span class="glyphicon glyphicon-arrow-up"></span></span>
-                    <input type="text" class="form-control" id="inputRed" placeholder="Reddit Account Name"  autocomplete="off">
+                    <input type="text" class="form-control popuppointer" id="inputRed" placeholder="Reddit Account Name"  autocomplete="off">
+                </div>
+            </div>
+            
+            <div class="row">
+            <div class="popup" id="inputRedpopup">
+                Your Reddit account will be analysed using our automated tool.
                 </div>
             </div>
             
@@ -179,13 +213,15 @@
         </div>
     </div><!-- /.container -->
 
-    <div class="bottombox"> 
-        <div class="container bottom">
-            <div class="col-md-offset-2 col-md-8">
-                <p>InsurePeople Limited is registered at Companies House (1087431) and authorised by the Financial Conduct Authority ("FCA"), registration number (xxxxxx). The registration details can be found on www.fca.gov.uk/register. For trading purposes, the registered address is xxxxx, xxx, xxx xxx. </p>   
-            </div>
-        </div><!-- /.container -->
-    </div>
+    <div class="bottombox border-top-fine"> 
+             <div class="container bottom">
+                   <div class="row">
+                <div class="col-md-offset-2 col-md-8"> 
+                    <p>InsurePeople Limited is registered at Companies House (1087431) and authorised by the Financial Conduct Authority ("FCA"), registration number (xxxxxx). The registration details can be found on www.fca.gov.uk/register. For trading purposes, the registered address is xxxxx, xxx, xxx xxx. </p>   
+                 </div>
+                   </div>
+            </div>  
+        </div>
 
 
     <!-- Bootstrap core JavaScript
